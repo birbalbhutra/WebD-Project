@@ -215,24 +215,14 @@ app.get('/api/customers', authenticateToken, (req , res) => {
 
 app.post('/api/customers' , [bodyParser.json(), authenticateToken], (req , res) => {
   Customer.find({} , (error , customers) => {
-    // let id = customers.reduce((agg, current) => {
-    //   if(agg < current.id){
-    //     agg = current.id;
-    //   }
-    //   return agg;
-    // }, 0);
     let i, recId = 0;
     for(i=0;i<customers.length;i++){
       if(recId < customers[i].id){
         recId = customers[i].id;
       }
     }
-    // let customer = {"id": id, "name": "", "address": "", "phone": ""};
-    // Object.assign(customer , req.body);
     req.body.id = id + 1;
-    // console.log(req.body.id);
     Customer.create(req.body, (error , newCustomer) => {
-      // console.log(newCustomer);
       res.json(newCustomer);
     });
   });
@@ -295,14 +285,6 @@ app.get('/api/products', authenticateToken, (req , res) => {
 
 app.post('/api/products' , [bodyParser.json(), authenticateToken], (req , res) => {
   Product.find({} , (error , products) => {
-    // let id = products.reduce((agg, current) => {
-    //   if(agg < current.id){
-    //     agg = current.id;
-    //   }
-    //   return agg;
-    // }, 0);
-    // let product = {"id": id, "name": "", "price": 0};
-    // Object.assign(product , req.body);
     let i, recId = 0;
     for(i=0;i<products.length;i++){
       if(recId < products[i].id){
@@ -310,9 +292,7 @@ app.post('/api/products' , [bodyParser.json(), authenticateToken], (req , res) =
       }
     }
     req.body.id = id + 1;
-    // console.log(product);
     Product.create(req.body , (error , newProduct) => {
-      // console.log(newProduct);
       res.json(newProduct);
     });
   });
@@ -366,14 +346,6 @@ app.get('/api/invoices', authenticateToken, (req , res) => {
 
 app.post('/api/invoices' , [bodyParser.json(), authenticateToken], (req , res) => {
   Invoice.find({} , (error , invoices) => {
-    // let id = invoices.reduce((agg, current) => {
-    //   if(agg < current.id){
-    //     agg = current.id;
-    //   }
-    //   return agg;
-    // }, 0);
-    // let invoice = {"id": id, "customer_id": 0, "discount": 0, "total": 0};
-    // Object.assign(invoice , req.body);
     let i, recId = 0;
     for(i=0;i<invoices.length;i++){
       if(recId < invoices[i].id){
@@ -381,9 +353,7 @@ app.post('/api/invoices' , [bodyParser.json(), authenticateToken], (req , res) =
       }
     }
     req.body.id = id + 1;
-    // console.log(invoice);
     Invoice.create(req.body, (error , newInvoice) => {
-      // console.log(newInvoice);
       res.json(newInvoice);
     });
   });
@@ -440,14 +410,6 @@ app.get('/api/invoices/:invoice_id/items', authenticateToken, (req , res) => {
 app.post('/api/invoices/:invoice_id/items' , [bodyParser.json(), authenticateToken], (req , res) => {
   var invoice_id = req.params.invoice_id;
   invoiceItem.find({invoice_id: invoice_id} , (error , invoiceItems) => {
-    // let id = invoiceItems.reduce((agg, current) => {
-    //   if(agg < current.id){
-    //     agg = current.id;
-    //   }
-    //   return agg;
-    // }, 0);
-    // let invoiceItem = {"id": id, "invoice_id": invoice_id, "product_id": 0, "quantity": 0};
-    // Object.assign(invoiceItem , req.body);
     let i, recId = 0;
     for(i=0;i<invoiceItems.length;i++){
       if(recId < invoiceItems[i].id){
@@ -456,9 +418,7 @@ app.post('/api/invoices/:invoice_id/items' , [bodyParser.json(), authenticateTok
     }
     req.body.id = id + 1;
     req.body.invoice_id = invoice_id;
-    // console.log(invoiceItem);
     invoiceItem.create(req.body, (error , newInvoiceItem) => {
-      // console.log(newInvoiceItem);
       res.json(newInvoiceItem);
     });
   });
