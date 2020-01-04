@@ -3,10 +3,10 @@
     document.getElementById('customerForm').addEventListener('submit' , async (temp) => {
         temp.preventDefault();
         let newCustomer = {
-                        name: document.forms['customerForm']['customerName'].value,
-                        address: document.forms['customerForm']['address'].value,
-                        phone: document.forms['customerForm']['phone'].value
-                      };
+            name: document.forms['customerForm']['customerName'].value,
+            address: document.forms['customerForm']['address'].value,
+            phone: document.forms['customerForm']['phone'].value
+        };
         try {
             let response = await fetch(('http://localhost:3000/api/customers') , {
                 method: 'POST',

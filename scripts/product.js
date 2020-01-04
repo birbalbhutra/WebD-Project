@@ -1,7 +1,6 @@
 (async () => {
   let token = localStorage.getItem('token');
     try {
-        console.log("requests");
         let fetch = [
             fetch(`http://localhost:3000/api/products`, {
                 method: 'GET',
