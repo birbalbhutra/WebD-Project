@@ -1,0 +1,61 @@
+.group{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button1{
+    display: flex;
+    justify-content: center;
+}
+
+#quantity,#customerName,#phone{
+    width: 100%;
+    height: 50px;
+}
+
+#address{
+    width: 100%;
+    height: 120px;
+}
+
+.tab1{
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.customerAdd{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    border: 1px solid black;
+}
+
+.para{
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    height: 50px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    font-weight: 900;
+    border: 1px solid black;
+}
+
+.padding{
+    padding-top: 100px;
+}
+
+.thead{
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border: 1px solid black;
+}

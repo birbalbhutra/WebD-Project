@@ -1,0 +1,32 @@
+.top{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+#img{
+    width: 46px;
+    height: 46px;
+}
+
+.top_left{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.top_right{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+}
+
+a{
+    padding-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    color: red;
+}
+

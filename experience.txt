@@ -1,0 +1,39 @@
+
+NAME    --------    BIRBAL BHUTRA
+
+
+PROJECT :-
+
+The objective of the project is to develop a client interface and 
+an API backend for invoicing management
+
+
+IMPLEMENTATION:-
+
+The project has been implemented with the help of 
+
+FRONTEND -  HTML, CSS, JAVASCRIPT has been used for developing all the
+            responsive webpages.
+
+BACKEND  -  NodeJS has been used for developing the API of invoicing
+            management.
+
+
+EXPERIENCE:-
+
+The overall learning and developing of the project has given a very good
+exposure on how to create a fullstack website, since we have implemented
+both frontend and backend. I have learned a lot of new things which were 
+otherwise won't we so easy to learn and use.
+
+
+CHALLENGES FACED:-
+
+The most challenging aspect of the project was to create dyanmic and responsive 
+webpages. We were required to create static templates which were then filled
+dynamically with the help of our scripting language and backend API. The webpage 
+also needed to be secure, so login feature was also required such that only verified
+users can access the website (Done with the help of json webtoken). 
+
+
+Overall the whole process was very amazing and exciting. 

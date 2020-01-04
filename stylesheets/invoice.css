@@ -1,0 +1,30 @@
+.formInput{
+    width: 100%;
+    height: 50px;
+}
+
+#addButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.totalStyle{
+    background-color: rgb(241, 204, 204);
+    height: 50px;
+    padding-top: 15px;
+    font-weight: 900;
+
+}
+
+#totalValue{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.padding{
+    padding-top: 50px;
+}
+
+.invItem{
+    border: 1px solid black;
+}
