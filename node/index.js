@@ -77,7 +77,7 @@ app.post('/api/customers' , [bodyParser.json(), authenticateToken], (req , res) 
         recId = customers[i].id;
       }
     }
-    req.body.id = id + 1;
+    req.body.id = recId + 1;
     Customer.create(req.body, (error , newCustomer) => {
       res.json(newCustomer);
     });
@@ -147,7 +147,7 @@ app.post('/api/products' , [bodyParser.json(), authenticateToken], (req , res) =
         recId = products[i].id;
       }
     }
-    req.body.id = id + 1;
+    req.body.id = recId + 1;
     Product.create(req.body , (error , newProduct) => {
       res.json(newProduct);
     });
@@ -208,7 +208,7 @@ app.post('/api/invoices' , [bodyParser.json(), authenticateToken], (req , res) =
         recId = invoices[i].id;
       }
     }
-    req.body.id = id + 1;
+    req.body.id = recId + 1;
     Invoice.create(req.body, (error , newInvoice) => {
       res.json(newInvoice);
     });
@@ -272,7 +272,7 @@ app.post('/api/invoices/:invoice_id/items' , [bodyParser.json(), authenticateTok
         recId = invoiceItems[i].id;
       }
     }
-    req.body.id = id + 1;
+    req.body.id = recId + 1;
     req.body.invoice_id = invoice_id;
     invoiceItem.create(req.body, (error , newInvoiceItem) => {
       res.json(newInvoiceItem);

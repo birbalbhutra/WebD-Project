@@ -22,9 +22,9 @@
                 className = "odd"; 
             }
             list += `<tr class=${className}>
-                        <td>${customer.name}</td>
-                        <td>${customer.address}</td>
-                        <td>${customer.phone}</td>
+                        <td class="col-lg-3">${customers[i].name}</td>
+                        <td class="col-lg-5">${customers[i].address}</td>
+                        <td class="col-lg-3">${customers[i].phone}</td>
                         <td class="col-lg-1"><a href=""><div><img src="../images/edit.png"></div></a></td>
                     </tr>`
         }

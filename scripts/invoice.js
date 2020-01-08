@@ -38,8 +38,8 @@
             list += `<tr class=${className}>
                         <td>${i + 1}</td>
                         <td>${tempCustomerName}</td>
-                        <td>${invoice.discount}</td>
-                        <td>${invoice.total}</td>
+                        <td>${invoice[i].discount}</td>
+                        <td>${invoice[i].total}</td>
                     </tr>`
         }
       document.getElementById('tbody').innerHTML = list;

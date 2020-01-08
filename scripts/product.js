@@ -22,9 +22,9 @@
                 className = "odd"; 
             }
             list += `<tr class=${className}>
-                        <td>${product.name}</td>
-                        <td>${product.price}</td>
-                        <td class="col-lg-1"><a href=""><div><img src="../images/edit.png"></div></a></td>
+                        <td class="col-lg-5">${products[i].name}</td>
+                        <td class="col-lg-5">${products[i].price}</td>
+                        <td class="col-lg-2"><a href=""><div><img src="../images/edit.png"></div></a></td>
                     </tr>`
         }
         document.getElementById('tbody').innerHTML = list;

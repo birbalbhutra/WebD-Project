@@ -3,7 +3,7 @@
       document.getElementById('productForm').addEventListener('submit' , async (temp) => {
         temp.preventDefault();
         let product = {
-            name: document.forms['productForm']['prodname'].value , 
+            name: document.forms['productForm']['productName'].value , 
             price: document.forms['productForm']['price'].value
         };
         try {
