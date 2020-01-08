@@ -12,7 +12,8 @@
             localStorage.setItem("value", username);
             console.log("logged in");
             window.location.replace('./html/customer.html');
-        } catch (e) {
+        } 
+        catch (temp) {
             console.log("login failed");
             
         }

@@ -1,7 +1,7 @@
 (async () => {
-  let token = localStorage.getItem('token');
+  let token = localStorage.getItem('key');
     try {
-        let fetch = [
+        let fetchAll = [
             fetch(`http://localhost:3000/api/products`, {
                 method: 'GET',
                 headers: {
@@ -10,7 +10,7 @@
                 }
             })
         ];
-      let response = await Promise.all(fetch);
+      let response = await Promise.all(fetchAll);
       let products = await response[0].json();
       let i,className;
         let list = "";

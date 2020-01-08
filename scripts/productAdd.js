@@ -1,5 +1,5 @@
 (async () => {
-    let token = localStorage.getItem('token');
+    let token = localStorage.getItem('key');
       document.getElementById('productForm').addEventListener('submit' , async (temp) => {
         temp.preventDefault();
         let product = {
